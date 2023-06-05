@@ -1,0 +1,30 @@
+doctype html
+link(rel='stylesheet' href='/static/stylesheets/bmi.css')
+//
+  Notes
+  BMI Fomula in this site: https://www.cdc.gov/healthyweight/assessing/bmi/childrens_bmi/childrens_bmi_formula.html
+  Age is irrelevant
+head
+  link(rel='stylesheet' href='/static/stylesheets/bmi.css')
+  link(rel='stylesheet' href='/static/stylesheets/bmi.css')
+  link(href='https://fonts.googleapis.com/css?family=Noto+Sans' rel='stylesheet')
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  meta(http-equiv='X-UA-Compatible' content='ie=edge')
+  title BMI checker
+.header
+  .wrapper
+    form(action='/', method='post')
+      h1 BMI calculator
+      p Insert Your Age
+      input#age(type='text', name='age', value=age)
+      p Insert Weight in Kg
+      input#weight(type='text', name='weight', value=weight)
+      br
+      p Insert Height in cm
+      input#height(type='text', name='height', value=height) 
+      br
+      button#calc check
+      if result
+        p#result Your BMI Result is: #{result}
+
